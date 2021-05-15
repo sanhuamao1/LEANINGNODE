@@ -2,13 +2,13 @@
 const MongoClient=require('mongodb').MongoClient
 
 // 判断某两值是否相等的库
-const test=requir('assert')
+const test=require('assert')
 
 // mongodb的连接地址
-const url='mongodb:127.0.0.1:27017'
+const url='mongodb://127.0.0.1:27017'
 
 // 数据库名称-指定数据库名称
-const dbName='sanhuamao1'
+const dbName='admin'
 
 // 连接使用客户端
 MongoClient.connect(url, function(err, client) {

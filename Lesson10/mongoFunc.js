@@ -8,7 +8,7 @@ const test=requir('assert')
 const url='mongodb:127.0.0.1:27017'
 
 // 数据库名称-指定数据库名称
-const dbName='sanhuamao1'
+const dbName='admin'
 
 // 连接使用客户端
 MongoClient.connect(url, function(err, client) {
