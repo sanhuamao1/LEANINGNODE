@@ -1,20 +1,16 @@
 const http=require('http');
 const fs=require('fs')
+const ejs=require('ejs')
+var template=fs.readFileSync(__dirname+'\\.\\helo.ejs','utf-8'); //相当于./helo.ejg
 
 const server=http.createServer((req,res)=>{
-    //文件绝对路径-文件编码-回调函数
-    //__dirname：当前文件所在目录
-    fs.readFile(__dirname+'/index.html','utf-8',(err,data)=>{
-        if(err){
-            res.setHeader('Content-Type','text/plain');//纯文本
-            res.statusCode=404;
-            res.end('404 Not Founded!')
-        }else{
-            res.setHeader('Content-Type','text/html');//html
-            res.statusCode=200;
-            res.end(data)
-        }
+    var data=ejs.render(template,{
+        title:'helo ejs',
+        content:'<strong>big helo ejs.</strong>'
     })
+    res.setHeader('Content-Type','text/html');
+    res.statusCode=200;
+    res.end(data)
 })
 
 const hostname='127.0.0.1';
