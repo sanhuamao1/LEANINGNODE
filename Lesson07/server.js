@@ -4,6 +4,7 @@ const ejs=require('ejs')
 var template=fs.readFileSync(__dirname+'\\.\\helo.ejs','utf-8'); //相当于./helo.ejg
 
 const server=http.createServer((req,res)=>{
+    //模板渲染
     var data=ejs.render(template,{
         title:'helo ejs',
         content:'<strong>big helo ejs.</strong>'
