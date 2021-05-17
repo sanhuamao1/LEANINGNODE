@@ -1,7 +1,7 @@
 const http=require('http');
 const fs=require('fs')
 const ejs=require('ejs')
-var template=fs.readFileSync(__dirname+'\\.\\helo.ejs','utf-8'); //相当于./helo.ejg
+var template=fs.readFileSync(__dirname+'/helo.ejs','utf-8'); //相当于./helo.ejg
 
 const server=http.createServer((req,res)=>{
     //模板渲染
