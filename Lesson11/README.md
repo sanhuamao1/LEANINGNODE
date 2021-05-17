@@ -5,6 +5,7 @@
 - 读取mongodb文档
 
 ## 实战演习
+### mongoFunc.js
 ```javascript
 const MongoClient=require('mongodb').MongoClient
 const test=require('assert')
