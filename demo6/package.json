@@ -1,0 +1,16 @@
+{
+  "name": "demo6",
+  "version": "1.0.0",
+  "description": "06 连接mongo\r ```bash\r npm i\r node connect.js\r ```",
+  "main": "connect.js",
+  "dependencies": {
+    "mongodb": "^3.6.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
