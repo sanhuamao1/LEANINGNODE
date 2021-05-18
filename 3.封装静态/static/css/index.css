@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+}
+.flex_c{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg_grey{
+    background: black;
+}
+.radius{
+    border-radius: 1em;
+}

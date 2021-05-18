@@ -1,16 +1,20 @@
 const http=require('http');
 const fs=require('fs')
+const path=require('path');
+const common=require('./modules');
 
 const server=http.createServer((req,res)=>{
-    //文件绝对路径-文件编码-回调函数
-    //__dirname：当前文件所在目录
-    fs.readFile(__dirname+'/index.html','utf-8',(err,data)=>{
+    let pathname=req.url
+    pathname=pathname=='/'?'/index.html':pathname
+	let extname=path.extname(pathname)
+    fs.readFile('./static'+pathname,(err,data)=>{
         if(err){
-            res.setHeader('Content-Type','text/plain');//纯文本
+        	res.setHeader('Content-Type','text/plain');
             res.statusCode=404;
             res.end('404 Not Founded!')
         }else{
-            res.setHeader('Content-Type','text/html');//html
+            let mime=common.getMimeType(extname)
+            res.setHeader('Content-Type', mime+";charset='utf-8'");
             res.statusCode=200;
             res.end(data)
         }

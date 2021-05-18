@@ -9,3 +9,4 @@ Nodejs起步
 ```bash
 node app.js
 ```
+ctrl+C可结束程序

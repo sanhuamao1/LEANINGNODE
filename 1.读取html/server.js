@@ -1,26 +1,7 @@
-读写HTML
-=========
-
-## 知识点
-- fs模块
-
-官方文档：http://nodejs.cn/api/fs.html
-
-## 实战演习
-
-### index.html
-```html
-<html>
-    <body>
-        <h1>Hello world!</h1>
-    </body>
-</html>
-```
-### server.js
-```javascript
 const http=require('http');
 const fs=require('fs')
 
+//__dirname：当前文件所在目录
 const server=http.createServer((req,res)=>{
     fs.readFile(__dirname+'/index.html','utf-8',(err,data)=>{
         if(err){
@@ -40,4 +21,3 @@ const port=3000;
 server.listen(port,hostname,()=>{
     console.log(`Server running at http://${hostname}:${port}/`);
 })
-```
