@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            padding:10px;
+        }
+        li{
+            line-height: 3em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>已注册用户：</h1>
+        <% for(let i=0 ; i < users.length;i++){  %>
+            <li>用户名：<%= users[i].username %>----密码：<%= users[i].pwd %></li>
+        <% } %>
+    </div>
+</body>
+</html>

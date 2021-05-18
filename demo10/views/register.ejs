@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <style>
+        body{
+            background-color: dimgrey;
+        }
+        *{
+            margin: 0;
+        }
+        .box{
+            width: 360px;
+            height: 220px;
+            background-color: darkseagreen;
+            margin: 200px auto;
+            text-align: center;
+            padding-top: 2em;
+            border-radius: 1em;
+        }
+        .box div{
+            line-height: 3em;
+        }
+    </style>
+</head>
+<body>
+    <form action="submit" method="post" class="box">
+        <h1>新用户注册</h1>
+        <div>
+            用户名：<input type="text" name="username">
+        </div>
+        <div>
+            密  码：<input type="text" name="pwd">
+        </div>
+        <div>
+            <input type="submit" value="提交">
+        </div>
+    </form>
+</body>
+</html>
