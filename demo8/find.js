@@ -7,16 +7,7 @@ MongoClient.connect(url, function(err, client) {
     test.equal(null, err);
     const adminDb = client.db(dbName)
     console.log('链接数据库成功')
-    //第一种写法
-    // adminDb.collection("posts",(err,collection)=>{
-    //     collection.find({tag:"test"}).toArray((err,docs)=>{
-    //         test.equal(null, err);
-    //         console.log(docs)
-    //         client.close()
-    //     })
-    // })
-    //第二种写法
-    adminDb.collection("posts").find({tag:"test"}).toArray((err,docs)=>{
+    adminDb.collection("posts").find({tag:"study"}).toArray((err,docs)=>{
         test.equal(null, err);
         console.log(docs)
         client.close()
