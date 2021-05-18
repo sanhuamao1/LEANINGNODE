@@ -1,12 +1,11 @@
-Nodejs起步
-=========
-
-## 安装
-- 官方下载：http://nodejs.cn/download/
-- 版本管理：nvm——https://github.com/creationix/nvm)。可以轻松地切换 Node.js 版本，也可以安装新版本用以尝试并且当出现问题时轻松地回滚
-
-## 执行脚本
-```bash
-node app.js
-```
-ctrl+C可结束程序
+# 目录说明
+- demo1：读取html
+- demo2：读取其他
+- demo3：封装静态
+- demo4：使用第三方包ejs
+- demo5：get与post
+- demo6：连接mongodb
+- demo7：给MongoDB插入数据
+- demo:8：查询数据
+- demo9：处理异步
+- demo10：封装express路由&注册用户并存入数据库
